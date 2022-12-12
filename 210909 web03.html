@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<!--
+// Emmet 코딩 방식으로 HTML 입력하기
+태그명1+태그명2... [탭키]
+태그명*3 [탭키]  반복
+태그명1>태그명2...
+$ 자동숫자증감
+{} 내용입력
+() 그룹핑
+[] 속성
+#아이디명     id="아이디명" 자동 삽입
+.클래스명     class="클래스명" 자동 삽입
+
+-->
+    <title>HTML 배우기3</title>
+</head>
+<body>
+<h1>Heading1-1</h1>
+<h1>Heading1-2</h1>
+<!--hr+ul>li{내용$}*5-->
+<hr>
+<ul>
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    <li>내용5</li>
+</ul>
+<hr>
+<form action="success.html">
+<!--
+라디오 버튼
+input:radio
+같은 그룹에서 하나만 선택
+주의사항은 같은 그룹안의 다른 아이템에서 name 값이 동일
+checked : 초기상태가 선택된 상태로 표시
+-->
+<!--h2{성별}+div>(label+input:radio)*2-->
+    <h2>성별</h2>
+    <div>
+        <label for="gender1">여자</label>
+        <input type="radio" name="" id="gender1"checked>
+        <label for="gender2">남자</label>
+        <input type="radio" name="" id="gender2">
+    </div>
+<!--    input:checkbox-->
+<!--    같은 그룹에서 여러개 선택 가능 -->
+<!--    checked : 초기상태가 선택된 상태로 표시-->
+    <h2>취미</h2>
+<!--    div>(label[for=hobby$]+input:checkbox#hobby$)*4-->
+    <div>
+        <label for="hobby1">등산</label><input type="checkbox" name="" id="hobby1">
+        <label for="hobby2">낚시</label><input type="checkbox" name="" id="hobby2">
+        <label for="hobby3">게임</label><input type="checkbox" name="" id="hobby3">
+        <label for="hobby4">영화감상</label><input type="checkbox" name="" id="hobby4">
+    </div>
+    <hr>
+<!-- 
+드롭다운메뉴=셀렉트메뉴 
+적은공간에서 많은 아이템을 사용해야 할경우 사용 
+
+select>option
+-->
+<!--div>select>option*5-->
+    <div>
+    <select name="" id="">
+        <option>====직업선택====</option>
+        <option value="">공무원</option>
+            <option value="">자영업</option>
+            <option value="">회사원</option>
+            <option value="">기타</option>
+        </select>
+    </div>
+<hr>
+<!--
+    button{전송} =  input:submit
+    : form의 action에 지정한 URL로 이동
+    취소버튼 : 폼문서의 초기화
+    input:reset
+-->
+<!--div>(input:submit+input:reset)-->
+    <div>
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+    </div>
+<!-- 날짜와 시간을 선택할 수 있는 폼요소-->
+    <div>
+        <label for="userDate1">날짜 선택</label>
+        <input type="date" name="" id="userDate1">
+        <br>
+        <label for="userDate2">날짜와 시간 선택</label>
+        <input type="datetime-local" name="" id="userDate2">
+    </div>
+
+
+
+</form>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 배우기</title>
+    <style>
+        .box1 , .box2 { width:100px; height:100px; text-align:center;
+                        border:1px solid black; margin:50px auto; }
+
+        /* 상태선택자
+           선택자:hover { 속성:값 ...}
+           선택자:active { 속성:값 ...}
+
+           선택자:link { 속성:값 ...}
+           선택자:visited { 속성:값 ...}
+
+           선택자:focus { 속성:값 ... }
+           선택자:blur { 속성:값 ... }
+        */
+        .box1:hover {background-color:lightyellow }
+        .box1:active {background-color:pink; color:white }
+
+        /* 하이퍼링크 텍스트 디자인 */
+        /* text-decoration:none => 밑줄 없음 */
+        .box3 ul li a { text-decoration:none; color:green; font-weight:bold }
+        .box3 ul li a:hover { color:black; text-decoration:underline; }
+        .box3 ul li a:active { color:white; background-color:red}
+
+        /* 폼 디자인 */
+        #form1 { width:200px; margin:50px auto; }
+        #form1 div { padding-bottom:10px }
+        #form1 div input, #form1 div textarea { background-color:lightgray;
+                                                border:1px solid black;}
+        #form1 div button { background-color:gray; color:white;
+                            border-radius:5px; padding:5px 10px; border:3px solid black}
+
+        /* 포커스 상태 디자인 */
+        #form1 div input:focus,
+        #form1 div textarea:focus {background-color:white;}
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<h1>CSS 배우기</h1>
+<hr>
+<!--(div.box${box$})*2-->
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+
+<hr>
+<!--div.box3>ul>(li>a{Menu$})*4-->
+<div class="box3">
+    <ul>
+        <li><a href="#">Menu1</a></li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+    </ul>
+</div>
+
+<hr>
+<form action="" id="form1">
+    <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+<!--(div>input)*3-->
+    <div><input type="text" placeholder="Name*"></div>
+    <div><input type="text" placeholder="Email*"></div>
+    <div><input type="text" placeholder="Website*"></div>
+    <div><button>Post Comment</button></div>
+</form>
+
+
+
+
+
+</body>
+</html>

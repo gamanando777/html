@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 배우기6</title>
+    <!-- CSS 정의 -->
+    <style>
+            /* CSS 영역 */
+            /*
+            >> 전체 선택자
+             * { 속성1:값1; 속성2:값2; ... }
+
+            : 문서 전체에 삽입된 모든 요소에 디자인 적용
+            : 초기화 (여백:padding, margin)
+            */
+
+
+        /* 전체 선택자 정의*/
+        * {margin:0; padding:0}
+
+        /* 클래스 선택자
+        text-align:center/left/right/justify
+        */
+        .ulBox { padding-top:50px }
+
+        #box1 h1 { text-align:center; color:brown; }
+        #box2 h2 { text-align:right;
+                   color:white;
+                   background-color:black;
+                   width:300px}
+
+
+                /*
+                >> 자손 선택자
+                 특정 부모 요소 안의 삽입된 태그 접근
+                 부모요소선택자> 자손선택 { 속성1:값1; 속성2:값2; ... }
+                */
+
+        /*
+        태그명#아이명 = div#box3
+        box3 아이디값을 가진 요소안의 모든 li 요소
+        */
+        #box3 li { font-weight:bold; color:blue; }
+
+        /* box3 아이디 안의 ul 태그안의 li 요소  */
+        #box3>ul>li { font-size:1.2em; padding-left:20px }
+
+        /* box3 아이디 안의 모든 span 요소  */
+        #box3 span { background-color:red; color:white;}
+
+        /* box3 아이디 안의 h1 태그 안의 span에 적용된 클래스 n1   */
+        #box3>h1>span.n1 {font-size:1.5em; color:black;}
+
+
+        /*
+        그룹 선택자
+        : 같은 속성과 값을 적용할 때 사용
+        선택자1, 선택자2 { 속성:값 ... }
+        */
+
+        h1, h2, h3, p {border:3px solid yellow; margin:30px 15px; width:300px;}
+
+
+        /*
+        >> 순서 선택자
+        선택자:first-child
+        선택자:last-child
+        선택자:nth-child(old/even/숫자/수식)
+        숫자는 1부터 시작작
+        */
+
+        #box4>ul>li { line-height:200%; text-align:center }
+        #box4>ul>li:first-child { background-color:beige }
+        #box4>ul>li:last-child { background-color:lightgray }
+        #box4>ul>li:nth-child(3) { background-color:lightpink }
+
+        #box5>ul>li { line-height:200%; padding-left:30px }
+        #box5>ul>li:nth-child(odd) { background-color:lightpink }
+        #box5>ul>li:nth-child(even) { background-color:lightblue }
+        #box5>ul>li:nth-child(3n) { font-size:2em }
+        /* 1,4,7 ....n값은 0부터 */
+        #box5>ul>li:nth-child(3n+1) { color:darkgreen; font-size:2em }
+
+
+        /*테이블 디자인
+            border-collapse:collapse => table 태그에 주로 적용. 셀과 셀사이가 병합
+        */
+        #table1 { border-collapse:collapse; margin:20px auto;  }
+        #table1>caption { font-weight:bold; font-size:1.3em }
+        #table1 tr:first-child td { background-color:lightblue;
+                                    font-weight:bold;
+                                    border-bottom:3px solid black}
+        #table1 tr td { text-align:center; padding:20px }
+
+        #table1 tr:last-child td:last-child { background-color:lightpink }
+        #table1 tr:nth-child(2) td:last-child { background-color:lightyellow }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<h1>CSS 배우기</h1>
+<hr>
+<!--ul>li{목록}*5-->
+<ul>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+    <li>목록</li>
+</ul>
+<hr>
+<!--dl>(dt{제목}+dd{내용$}*3)-->
+<dl>
+    <dt>제목</dt>
+    <dd>내용1</dd>
+    <dd>내용2</dd>
+    <dd>내용3</dd>
+</dl>
+
+<hr>
+<!--div#box1>(h1+h2+(ul>li{리스트$}*3))-->
+<div id="box1">
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+</div>
+<hr>
+<!--div#box2>(h1+h2+(ul>li{리스트$}*3))-->
+<div id="box2">
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+</div>
+
+<hr>
+<!--div#box3>(h1+h2+(ul>li{리스트$}*3))-->
+<div id="box3">
+    <h1>제목<span class="n1">1</span></h1>
+    <h2>제목2</h2>
+    <ul>
+        <li>리스트<span>1</span></li>
+        <li>리스트2</li>
+        <li>리스트<span>3</span></li>
+    </ul>
+    <hr>
+    <ol>
+        <li>리스트1</li>
+        <li>리스트<span>2</span></li>
+        <li>리스트<span class="n3">3</span></li>
+    </ol>
+</div>
+
+<hr>
+<h3>제목3</h3>
+<p>
+    행1<br>
+    행2<br>
+    행3<br>
+    행4
+</p>
+
+<hr>
+<!--div#box4>ul>li{목록$}*10-->
+<div id="box4">
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+        <li>목록6</li>
+        <li>목록7</li>
+        <li>목록8</li>
+        <li>목록9</li>
+        <li>목록10</li>
+    </ul>
+</div>
+<hr>
+<div id="box5">
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+        <li>목록6</li>
+        <li>목록7</li>
+        <li>목록8</li>
+        <li>목록9</li>
+        <li>목록10</li>
+    </ul>
+</div>
+
+<hr>
+<h2>CSS 퀴즈 1-16</h2>
+<!--  3행  6열 -->
+<!--table>(tr>td{내용$}*6)*3-->
+<table border="1" id="table1">
+    <!-- 테이블 제목 -->
+    <caption>초빙 교수 채용 분야 및 인원</caption>
+    <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+    </tr>
+    <tr>
+        <td rowspan="2">내용1</td>
+        <td rowspan="2">내용2</td>
+        <td rowspan="2">내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td rowspan="2">내용6</td>
+    </tr>
+    <tr>
+<!--        <td>내용1</td>-->
+<!--        <td>내용2</td>-->
+<!--        <td>내용3</td>-->
+        <td>내용4</td>
+        <td>내용5</td>
+<!--        <td>내용6</td>-->
+    </tr>
+</table>
+
+</body>
+</html>

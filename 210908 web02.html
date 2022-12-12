@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 배우기2</title>
+</head>
+<body>
+<h1>폼 문서 제작</h1>
+<!--
+form 문서 : 로그인, 회원가입, 게시판, 주문서....
+
+폼구성요소
+- 라벨 / 필드셋 / 레전드
+- 입력상자 / 암호상자 / 여러줄글상자
+- 체크박스 / 라디오버튼 / 폼버튼(제출, 리셋)
+
+form>폼구성요소
+action :
+ 제출버튼을 클릭하면 연결되는 URL
+
+label
+ : 텍스트필드에 제목을 달아주는 역할
+ for: 텍스트필드의 아이디값과 연결
+
+input:text
+텍스트필드
+:한줄 글상자
+
+input:password
+암호텍스트필드
+암호글상자
+-->
+
+<form action="">
+    <!-- 한줄 글상자 -->
+    <div>
+        <lavel for="userID">아이디</lavel>
+        <input type="text" id="userID">
+    </div>
+    <!-- 암호 상자 -->
+    <!--div>label{패스워드}>input:password-->
+    <div>
+        <label>패스워드
+            <input type="password">
+        </label>
+    </div>
+
+<!--
+input:file
+파일첨부상자
+
+textarea
+여러줄글상자
+cols : 가로글자갯수
+rows : 세로줄수
+-->
+    <!--div>(label[for=userFile]{첨부파일}+input:file#userFile)-->
+    <div>
+        <label for="userFile">첨부파일</label>
+        <input type="file" name="" id="userFile">
+    </div>
+    <!--div>(label[for=userMsg]{메모}+textarea#userMsg)-->
+    <div>
+        <label for="userMsg">메모</label>
+        <textarea name="" id="userMsg" cols="30" rows="10"></textarea>
+    </div>
+
+<!--
+fieldset>legend{제목}
+그룹핑
+사각테두리 생성
+제목은 legend로 설정
+-->
+    <!--fieldset>(legend{검색}+input:search)-->
+    <fieldset>
+        <legend>검색</legend>
+        <input type="search" name="" id="" placeholder="검색어를 입력해 주세요">
+    </fieldset>
+
+
+
+</form>
+
+
+
+</body>
+</html>

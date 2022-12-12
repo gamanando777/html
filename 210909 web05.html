@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 배우기2</title>
+    <!--
+    head 영역의 style 태그
+     <style>
+      선택자 { 속성:값; }
+     </style>
+     -->
+    <style>
+        /* CSS 주석 */
+        /* h1 태그 디자인 => 태그 선택자 방식 */
+        /* 태그명 { 속성1:값1; 속성2:값2;...} */
+        h1 { color:white; background-color:black; width:500px; }
+        /* li 태그 디자인 => 왼쪽에 여백(padding-left), 밑줄(text-decoration), 줄간격(line-height) */
+        li { padding-left:50px; text-decoration:underline; line-height:200% }
+
+        /*
+        >> 클래스 선택자
+        : html 요소중에서 필요한 부분에 직접 적용가능.
+        : 중복 적용 가능
+
+        Step1 > 정의
+            .클래스이름 { 속성1:값1; 속성2:값2; ... }
+
+        Step2> 적용
+            <태그명 class="클래스이름">
+        */
+        /* font-weight:bold 글자를 진하게   */
+        .span1 { background-color:yellow; color:red; font-weight:bold}
+        .span2 { background-color:hotpink; color:white; font-weight:bold}
+
+        /*
+        >> 아이디 선택자
+         : html 요소중에서 필요한 부분에 직접 적용가능.
+         : 문서에서 한번만 디자인 적용 가능
+         Step1 > 정의
+          #아이디이름 { 속성1:값1; 속성2:값2; ... }
+         Step2> 적용
+          <태그명 id="아이디이름">
+
+          padding-left / padding-right / padding-top / padding-bottom => 각 방향으로 안쪽여백
+          margin-left / margin-right / margin-top / margin-bottom => 각 방향으로 바깥여백
+          margin-left, margin-right 를 auto 로 지정하면 중앙정렬
+          margin/padding:n 상하좌우 같은 여백
+          margin/paddind: 상하 좌우
+          margin:12시 3시 6시 9시(시계방향으로 적용할 수도 있음.)
+          border/border-top/border-bottom/border-left/border-right:테두리스타일 굵기 색상
+           */
+
+          /* 아이디 선택자 정의 */
+          #box1 {
+                 width:100px;
+                 background-color:yellow;
+                 border:1px solid red;
+                 padding:50px 100px;
+                 margin:50px auto;
+                 }
+          #box2 {
+                 width:200px;
+                 background-color:yellowgreen;
+                 border:1px solid blue;
+                 padding:50px 100px;
+                 margin:50px auto;
+                 }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<h1>Head 방식으로 CSS 적용하기</h1>
+    <hr>
+<!--(h${Heading$})*4-->
+    <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <h4>Heading4</h4>
+<hr>
+<!--(ul>li{목록}*4)+hr+(ol>li{목록}*4)-->
+    <ul>
+        <li class="span1">목록</li>
+        <li><span class="span1">목</span>>록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ul>
+    <hr>
+    <ol class="span2">
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ol>
+    <hr>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+
+
+</body>
+</html>
